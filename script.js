@@ -1,8 +1,6 @@
 const sounds = ["applause", "boo", "gasp", "tada", "victory"];
-
 const buttonsContainer = document.getElementById("buttons");
 
-// Function to stop all sounds
 function stopSounds() {
   sounds.forEach(sound => {
     const audio = document.getElementById(sound);
@@ -33,10 +31,10 @@ sounds.forEach(sound => {
   buttonsContainer.appendChild(button);
 });
 
-// Create stop button
+// Create stop button (WITHOUT btn class)
 const stopButton = document.createElement("button");
 stopButton.innerText = "Stop";
-stopButton.className = "btn stop";
+stopButton.className = "stop";
 
 stopButton.addEventListener("click", stopSounds);
 
