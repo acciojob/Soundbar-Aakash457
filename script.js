@@ -1,6 +1,8 @@
-const sounds = ["applause", "boo", "gasp", "tada", "victory"];
+const sounds = ["applause", "boo", "gasp", "tada", "victory", "wrong"];
+
 const buttonsContainer = document.getElementById("buttons");
 
+// Stop all sounds
 function stopSounds() {
   sounds.forEach(sound => {
     const audio = document.getElementById(sound);
@@ -17,7 +19,7 @@ sounds.forEach(sound => {
   document.body.appendChild(audio);
 });
 
-// Create sound buttons
+// Create sound buttons (6 buttons with class "btn")
 sounds.forEach(sound => {
   const button = document.createElement("button");
   button.innerText = sound;
@@ -31,7 +33,7 @@ sounds.forEach(sound => {
   buttonsContainer.appendChild(button);
 });
 
-// Create stop button (WITHOUT btn class)
+// Create Stop button (NOT .btn)
 const stopButton = document.createElement("button");
 stopButton.innerText = "Stop";
 stopButton.className = "stop";
